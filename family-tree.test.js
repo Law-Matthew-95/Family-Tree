@@ -19,14 +19,14 @@ describe('Family Tree', function(){
         expect(David.name).toEqual('David')
     })
     test('My parents are there', function(){
-        count = 0
-        for (var parents of familyTree){
-            var parent = parents.name
-            if (parent == 'Simon')
-            // || parent == 'Alison')
-            count++
-
-        expect(count).toEqual(2)
+        var count = 0
+        for (parents of familyTree){
+            const parent = parents.name
+            if (parent == 'Simon'|| parent == 'Alison'){
+                count++
+            }
         }
+        expect(count).toEqual(2)
+        
     })
 })
